@@ -17,5 +17,11 @@ pipeline {
                 sh "pip3 install -r requirements.txt"
             }
         }
+
+        stage("Imprimir Carro"){
+            steps{
+                echo "El valor del carro es: ${CARRO}"
+            }
+        }
     }
 }
