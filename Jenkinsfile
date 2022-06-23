@@ -7,11 +7,15 @@ pipeline {
 
     stages{
         stage("Verificar Python"){
-            sh "python3 --version"
+            steps {
+                sh "python3 --version"
+            }
         }
 
         stage("Instalar Dependencias"){
-            sh "pip3 install -r requirements.txt"
+            steps{
+                sh "pip3 install -r requirements.txt"
+            }
         }
     }
 }
