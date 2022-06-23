@@ -5,7 +5,7 @@ pipeline {
         APPID = '35e538ca-825a-4f7d-bb6c-0daaaa0c681a'
         TENANT = '25600acd-d1ea-40ed-b091-46a5c1489762'
         PASSWORD = credentials('password-account')
-        APP_NAME = 'Python-App'
+        APP_NAME = 'Python-App-22062022'
     }
 
     stages{
