@@ -2,7 +2,9 @@ pipeline {
     agent any
 
     environment {
-        CARRO = 'Nissan'
+        APPID = '35e538ca-825a-4f7d-bb6c-0daaaa0c681a'
+        TENANT = '25600acd-d1ea-40ed-b091-46a5c1489762'
+        PASSWORD = credentials('password-account')
     }
 
     stages{
@@ -18,9 +20,9 @@ pipeline {
             }
         }
 
-        stage("Imprimir Carro"){
+        stage("Azure Login"){
             steps{
-                echo "El valor del carro es: ${CARRO}"
+                sh "az login --service-principal --username ${APPID} --password ${PASSWORD} --tenant ${TENANT}"
             }
         }
     }
