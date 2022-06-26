@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        APPID = '35e538ca-825a-4f7d-bb6c-0daaaa0c681a'
-        TENANT = '25600acd-d1ea-40ed-b091-46a5c1489762'
-        PASSWORD = credentials('password-account')
-        APP_NAME = 'Python-App-22062022'
+        APPID = 'fb60ef31-1a99-462d-a9f1-c3b243baf2f8'
+        TENANT = '42d1caad-48a6-43bd-a6dd-eb0a9d0abd43'
+        PASSWORD = credentials('password-account-patricia')
+        APP_NAME = 'Python-App-patricia'
     }
 
     stages{
