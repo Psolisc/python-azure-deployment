@@ -26,7 +26,7 @@ pipeline {
                 echo "=== LOGIN TO AZURE ==="
                 sh "az login --service-principal --username ${APPID} --password ${PASSWORD} --tenant ${TENANT}"
                 echo "=== DEPLOYING APP ==="
-                sh "az webapp up --runtime PYTHON:3.9 --sku B1 --resource-group rg-proteus-infra --name ${APP_NAME}"
+                sh "az webapp up --runtime PYTHON:3.9 --sku B1 --resource-group cloud-shell-storage-eastus --name ${APP_NAME}"
                 echo "=== LOGOUT TO AZURE ==="
                 sh "az logout"
             }
